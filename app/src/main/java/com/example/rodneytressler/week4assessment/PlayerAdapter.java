@@ -1,10 +1,12 @@
 package com.example.rodneytressler.week4assessment;
 
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -56,6 +58,10 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
         }
 
         public void bindPlayer(Player player) {
+
+            playerName.setText(playerList.get(getAdapterPosition()).getPlayerName());
+            playerTeam.setText(playerList.get(getAdapterPosition()).getPlayerTeam());
+            playerNumber.setText(playerList.get(getAdapterPosition()).getPlayerNumber());
 
         }
     }
